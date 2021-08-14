@@ -6,6 +6,7 @@ use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /**
  * Theme assets
@@ -129,4 +130,83 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+});
+
+/**
+ * Initialize ACF Builder
+ * @link https://roots.io/guides/using-acf-builder-with-sage/
+ */
+add_action('init', function () {
+    if (!function_exists('acf_add_local_field_group')) return;
+
+    collect(glob(config('theme.dir') . '/app/fields/*.php'))->map(function ($field) {
+        return require_once($field);
+    })->map(function ($field) {
+        if ($field instanceof FieldsBuilder) {
+            acf_add_local_field_group($field->build());
+        }
+    });
+});
+
+/**
+ * Register Database Post Types
+ *
+ * fields are built in ACF controller
+ */
+add_action('init', function () {
+    //Clinics
+    register_post_type('clinic',
+        array(
+            'labels'      => array(
+                'name'          => __('Clinics', 'textdomain'),
+                'singular_name' => __('Clinic', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //Doctors
+    register_post_type('doctor',
+        array(
+            'labels'      => array(
+                'name'          => __('Doctors', 'textdomain'),
+                'singular_name' => __('Doctor', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //Invoices
+    register_post_type('invoice',
+        array(
+            'labels'      => array(
+                'name'          => __('Invoices', 'textdomain'),
+                'singular_name' => __('Invoice', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //CT Reports
+    register_post_type('ct_report',
+        array(
+            'labels'      => array(
+                'name'          => __('CT Reports', 'textdomain'),
+                'singular_name' => __('CT Report', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //X-Ray Reports
+    register_post_type('xray_report',
+        array(
+            'labels'      => array(
+                'name'          => __('XRay Reports', 'textdomain'),
+                'singular_name' => __('XRay Report', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
 });

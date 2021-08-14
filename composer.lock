@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5e169eb87481574641b2c3fb63e1a9c",
+    "content-hash": "a5e3110ed6e1d8741f09669e00151f79",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -1049,6 +1049,52 @@
                 "source": "https://github.com/soberwp/controller/tree/2.1.2"
             },
             "time": "2020-03-01T09:03:34+00:00"
+        },
+        {
+            "name": "stoutlogic/acf-builder",
+            "version": "1.11.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StoutLogic/acf-builder.git",
+                "reference": "85f506fa469b473ae7807be517e559b901356c18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/85f506fa469b473ae7807be517e559b901356c18",
+                "reference": "85f506fa469b473ae7807be517e559b901356c18",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "^1.1|^2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "2.*",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StoutLogic\\AcfBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Pfisterer",
+                    "email": "steve@stoutlogic.com"
+                }
+            ],
+            "description": "An Advanced Custom Field Configuration Builder",
+            "support": {
+                "issues": "https://github.com/StoutLogic/acf-builder/issues",
+                "source": "https://github.com/StoutLogic/acf-builder/tree/1.11.1"
+            },
+            "time": "2021-07-13T18:51:50+00:00"
         },
         {
             "name": "symfony/debug",
@@ -2252,5 +2298,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
