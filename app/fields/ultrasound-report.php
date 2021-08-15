@@ -21,7 +21,19 @@ $fields
     ->addText('patient', [
         'wrapper' => ['width' => '33']
     ])
+    ->addText('sex', [
+        'wrapper' => ['width' => '33']
+    ])
+    ->addText('species', [
+        'wrapper' => ['width' => '33']
+    ])
     ->addText('breed', [
+        'wrapper' => ['width' => '33']
+    ])
+    ->addText('age', [
+        'wrapper' => ['width' => '33']
+    ])
+    ->addText('owner', [
         'wrapper' => ['width' => '33']
     ])
     ->addPostObject('doctor', [
@@ -40,12 +52,6 @@ $fields
         'return_format' => 'object',
         'ui' => 1,
     ])
-    ->addText('owner', [
-        'wrapper' => ['width' => '33']
-    ])
-    ->addText('sex', [
-        'wrapper' => ['width' => '33']
-    ])
     ->addPostObject('practice', [
         'instructions' => '',
         'required' => 0,
@@ -61,12 +67,6 @@ $fields
         'multiple' => 0,
         'return_format' => 'object',
         'ui' => 1,
-    ])
-    ->addText('species', [
-        'wrapper' => ['width' => '33']
-    ])
-    ->addText('age', [
-        'wrapper' => ['width' => '33']
     ])
     ->addTextArea('clinicalHistory')
     ->addGroup('sonographic_findings')
