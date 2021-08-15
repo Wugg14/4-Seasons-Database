@@ -198,17 +198,6 @@ add_action('init', function () {
             'has_archive' => true,
         )
     );
-    //X-Ray Reports
-    register_post_type('xray_report',
-        array(
-            'labels'      => array(
-                'name'          => __('XRay Reports', 'textdomain'),
-                'singular_name' => __('XRay Report', 'textdomain'),
-            ),
-            'public'      => true,
-            'has_archive' => true,
-        )
-    );
     //Ultrasound Reports
     register_post_type('ultrasound_report',
         array(
