@@ -109,6 +109,7 @@ $fields
         ],
     ])
     ->endGroup()
+
     ->addGroup('LV_Wall-s', [
         'label' => 'LV Wall-s'
     ])
@@ -181,6 +182,7 @@ $fields
         ],
     ])
     ->endGroup()
+
     ->addGroup('LV_Chamber-s', [
         'label' => 'LV Chamber-s',
     ])
@@ -200,9 +202,24 @@ $fields
             'id' => 'lower_range_LV_Chamber_S',
         ],
     ])
-    ->addText('upper_range_LV_Chamber_S')
-    ->addText('LV_SD_result')
+    ->addText('upper_range_LV_Chamber_S', [
+        'label' => 'Upper Limit:',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_LV_Chamber_S',
+        ],
+    ])
+    ->addText('LV_SD_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'LV_SD_result',
+        ],
+    ])
     ->endGroup()
+
     ->addGroup('Fractional_Shortening', [
         'label' => 'Fractional Shortening',
     ])
@@ -239,40 +256,219 @@ $fields
         ],
     ])
     ->endGroup()
-    ->addGroup('Septum-d')
-    ->addText('IVS_Diastolic_Thickness')
-    ->addText('lower_range_septum_d')
-    ->addText('upper_range_septum_d')
-    ->addText('IVS_DT_result')
+
+    ->addGroup('Septum-d', [
+        'label' => 'Septum-d',
+    ])
+    ->addText('IVS_Diastolic_Thickness', [
+        'label' => 'Thickness MM',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'IVS_Diastolic_Thickness',
+        ],
+    ])
+    ->addText('lower_range_septum_d', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'lower_range_septum_d',
+        ],
+    ])
+    ->addText('upper_range_septum_d', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_septum_d',
+        ],
+    ])
+    ->addText('IVS_DT_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'IVS_DT_result',
+        ],
+    ])
     ->endGroup()
-    ->addGroup('Septum-s')
-    ->addText('IVS_Systolic_Thickness')
-    ->addText('lower_range_septum_s')
-    ->addText('upper_range_septum_s')
-    ->addText('IVS_ST_result')
+
+    ->addGroup('Septum-s', [
+        'label' => 'Septum-s',
+    ])
+    ->addText('IVS_Systolic_Thickness', [
+        'label' => 'Thickness MM',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'IVS_Systolic_Thickness',
+        ],
+    ])
+    ->addText('lower_range_septum_s', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'lower_range_septum_s',
+        ],
+    ])
+    ->addText('upper_range_septum_s', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_septum_s',
+        ],
+    ])
+    ->addText('IVS_ST_result', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_septum_s',
+        ],
+    ])
     ->endGroup()
-    ->addGroup('aorta')
-    ->addText('Aortic_Root')
-    ->addText('lower_range_aorta')
-    ->addText('upper_range_aorta')
-    ->addText('AR_result')
+
+    ->addGroup('aorta', [
+        'label' => 'Aorta',
+    ])
+    ->addText('Aortic_Root', [
+        'label' => 'Aortic Root',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'Aortic_Root',
+        ],
+    ])
+    ->addText('lower_range_aorta', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'lower_range_aorta',
+        ],
+    ])
+    ->addText('upper_range_aorta', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_aorta',
+        ],
+    ])
+    ->addText('AR_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'AR_result',
+        ],
+    ])
     ->endGroup()
-    ->addGroup('Left Atrium')
-    ->addText('Left_Atrium')
-    ->addText('lower_range_left_atrium')
-    ->addText('upper_range_left_atrium')
-    ->addText('LA_result')
+
+    ->addGroup('Left Atrium', [
+        'label' => 'Left Atrium',
+    ])
+    ->addText('Left_Atrium', [
+        'label' => 'Left Atrium',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'Left_Atrium',
+        ],
+    ])
+    ->addText('lower_range_left_atrium', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'lower_range_left_atrium',
+        ],
+    ])
+    ->addText('upper_range_left_atrium', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_left_atrium',
+        ],
+    ])
+    ->addText('LA_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'LA_result',
+        ],
+    ])
     ->endGroup()
-    ->addGroup('la/ao')
-    ->addText('Left_Atrium_over_AO')
-    ->addText('lower_range_la_over_ao')
-    ->addText('upper_range_la_over_ao')
-    ->addText('la_over_ao_result')
+
+    ->addGroup('la/ao', [
+        'label' => 'LA/AO',
+    ])
+    ->addText('Left_Atrium_over_AO', [
+        'label' => 'Left Atrium/AO',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'Left_Atrium_over_AO',
+        ],
+    ])
+    ->addText('lower_range_la_over_ao', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'lower_range_la_over_ao',
+        ],
+    ])
+    ->addText('upper_range_la_over_ao', [
+        'label' => 'Lower Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_la_over_ao',
+        ],
+    ])
+    ->addText('la_over_ao_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'la_over_ao_result',
+        ],
+    ])
     ->endGroup()
-    ->addGroup('EPSS')
-    ->addText('EPSS')
-    ->addText('upper_range_epss')
-    ->addText('epss_result')
+
+    ->addGroup('EPSS', [
+        'label' => 'EPSS',
+    ])
+    ->addText('EPSS', [
+        'label' => 'EPSS',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'EPSS',
+        ],
+    ])
+    ->addText('upper_range_epss', [
+        'label' => 'Upper Limit',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'upper_range_epss',
+        ],
+    ])
+    ->addText('epss_result', [
+        'label' => 'Result',
+        'wrapper' => [
+            'width' => '25',
+            'class' => '',
+            'id' => 'epss_result',
+        ],
+    ])
     ->endGroup()
     ->endGroup()
     ->addText('m_mode_comments')
