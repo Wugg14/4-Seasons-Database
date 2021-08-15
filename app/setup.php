@@ -209,4 +209,15 @@ add_action('init', function () {
             'has_archive' => true,
         )
     );
+    //Ultrasound Reports
+    register_post_type('ultrasound_report',
+        array(
+            'labels'      => array(
+                'name'          => __('Ultrasound Reports', 'textdomain'),
+                'singular_name' => __('Ultrasound Report', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
 });
