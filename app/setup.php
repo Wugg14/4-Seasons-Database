@@ -220,4 +220,15 @@ add_action('init', function () {
             'has_archive' => true,
         )
     );
+    //Echo Reports
+    register_post_type('echo_report',
+        array(
+            'labels'      => array(
+                'name'          => __('Echocardiography Reports', 'textdomain'),
+                'singular_name' => __('Echocardiography Report', 'textdomain'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
 });
