@@ -15,13 +15,16 @@ $fields
       'choices' => ['MVR', '4 Seasons']
   ])
   ->addDatePicker('date', [
-      'wrapper' => ['width' => '33']
+      'wrapper' => ['width' => '25']
   ])
   ->addText('patient', [
-      'wrapper' => ['width' => '33']
+      'wrapper' => ['width' => '25']
+  ])
+  ->addText('species', [
+      'wrapper' => ['width' => '25']
   ])
   ->addText('owner', [
-      'wrapper' => ['width' => '33']
+      'wrapper' => ['width' => '25']
   ])
   ->addPostObject('doctor', [
       'instructions' => '',
@@ -55,14 +58,23 @@ $fields
       'return_format' => 'object',
       'ui' => 1,
   ])
-  ->addText('service', [
-      'wrapper' => ['width' => '33']
+  ->addPostObject('service', [
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => [],
+      'wrapper' => [
+          'width' => '25',
+          'class' => '',
+          'id' => '',
+      ],
+      'post_type' => ['service'],
+      'taxonomy' => [],
+      'allow_null' => 0,
+      'multiple' => 0,
+      'return_format' => 'object',
+      'ui' => 1,
   ])
-  ->addText('charge', [
-      'wrapper' => ['width' => '33']
-  ])
-  ->addTextArea('description')
-  ->addText('submit');
+  ->addTextArea('description');
 
 
 return $fields;
