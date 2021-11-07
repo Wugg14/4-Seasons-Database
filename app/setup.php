@@ -238,4 +238,28 @@ add_action('init', function () {
             'has_archive' => true,
         )
     );
+    //Radio Reports
+    register_post_type('misc',
+        array(
+            'labels'      => array(
+                'name'          => __('Misc. Reports', 'textdomain'),
+                'singular_name' => __('Misc. Report', 'textdomain'),
+            ),
+            'supports' => ['title', false],
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //Radio Reports
+    register_post_type('service',
+        array(
+            'labels'      => array(
+                'name'          => __('Services', 'textdomain'),
+                'singular_name' => __('Service', 'textdomain'),
+            ),
+            'supports' => ['title', false],
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
 });
