@@ -74,38 +74,49 @@ $fields
         'wrapper' => ['width' => '25'],
         'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('spleen', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('spleen', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('stomach', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('stomach', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('pancreas', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('pancreas', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('intestines', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('intestines', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('adrenals', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('adrenals', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('l_kidney', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('l_kidney', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('r_kidney', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('r_kidney', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('bladder', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('bladder', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('sublum', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('sublum', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('prostate', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('prostate', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
-    ->addText('uterus', [
-        'wrapper' => ['width' => '25']
+    ->addSelect('uterus', [
+        'wrapper' => ['width' => '25'],
+        'choices' => ['Normal', 'Abnormal', 'See Below', 'N.A.']
     ])
     ->endGroup()
     ->addTextArea('conclusions')

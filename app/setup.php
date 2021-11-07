@@ -163,6 +163,7 @@ add_action('init', function () {
             ),
             'public'      => true,
             'has_archive' => true,
+            'supports' => ['title', false],
         )
     );
     //Doctors
@@ -172,6 +173,7 @@ add_action('init', function () {
                 'name'          => __('Doctors', 'textdomain'),
                 'singular_name' => __('Doctor', 'textdomain'),
             ),
+            'supports' => ['title', false],
             'public'      => true,
             'has_archive' => true,
         )
@@ -183,6 +185,7 @@ add_action('init', function () {
                 'name'          => __('Invoices', 'textdomain'),
                 'singular_name' => __('Invoice', 'textdomain'),
             ),
+            'supports' => ['title', false],
             'public'      => true,
             'has_archive' => true,
         )
@@ -194,6 +197,7 @@ add_action('init', function () {
                 'name'          => __('CT Reports', 'textdomain'),
                 'singular_name' => __('CT Report', 'textdomain'),
             ),
+            'supports' => ['title', false],
             'public'      => true,
             'has_archive' => true,
         )
@@ -205,6 +209,7 @@ add_action('init', function () {
                 'name'          => __('Ultrasound Reports', 'textdomain'),
                 'singular_name' => __('Ultrasound Report', 'textdomain'),
             ),
+            'supports' => ['title', false],
             'public'      => true,
             'has_archive' => true,
         )
@@ -216,6 +221,19 @@ add_action('init', function () {
                 'name'          => __('Echocardiography Reports', 'textdomain'),
                 'singular_name' => __('Echocardiography Report', 'textdomain'),
             ),
+            'supports' => ['title', false],
+            'public'      => true,
+            'has_archive' => true,
+        )
+    );
+    //Radio Reports
+    register_post_type('radio',
+        array(
+            'labels'      => array(
+                'name'          => __('Radiographic Interpretations', 'textdomain'),
+                'singular_name' => __('Radiographic Interpretation', 'textdomain'),
+            ),
+            'supports' => ['title', false],
             'public'      => true,
             'has_archive' => true,
         )

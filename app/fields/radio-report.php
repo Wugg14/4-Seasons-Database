@@ -42,8 +42,21 @@ $fields
       'return_format' => 'object',
       'ui' => 1,
   ])
-  ->addText('practice', [
-      'wrapper' => ['width' => '33']
+  ->addPostObject('practice', [
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => [],
+      'wrapper' => [
+          'width' => '25',
+          'class' => '',
+          'id' => '',
+      ],
+      'post_type' => ['clinic'],
+      'taxonomy' => [],
+      'allow_null' => 0,
+      'multiple' => 0,
+      'return_format' => 'object',
+      'ui' => 1,
   ])
   ->addText('phone', [
       'wrapper' => ['width' => '33']
@@ -58,7 +71,6 @@ $fields
       'wrapper' => ['width' => '33']
   ])
   ->addTextArea('Rad_Findings')
-  ->addTextArea('Rad_Conclusions')
-  ->addText('submit');
+  ->addTextArea('Rad_Conclusions');
 
 return $fields;

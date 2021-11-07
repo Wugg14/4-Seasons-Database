@@ -1,12 +1,12 @@
 {{--
-  Template Name: CT Interpretation Template
+  Template Name: Radiographic Interpretation Template
 --}}
 
 @extends('layouts.app')
 
 @section('content')
     <img src="@if(get_field('mvr4seasons') == 'MVR') @asset('images/mvrLogo.PNG') @else  @asset('images/logo.png') @endif" />
-    <h1>C.T. Interpretation</h1>
+    <h1>Radiographic Interpretation</h1>
     <hr/>
     <hr/>
     <div class="row">
@@ -23,13 +23,13 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-3">Image Date(s): {{ get_field('CT_Image_Date') }}</div>
-        <div class="col-3">No. of Images: {{ get_field('CT_NumImages') }}</div>
+        <div class="col-3">Image Date(s): {{ get_field('Rad_Image_Date') }}</div>
+        <div class="col-3">No. of Images: {{ get_field('Rad_NumImages') }}</div>
         <div class="col-3">Views: {{ get_field('views') }}</div>
     </div>
     <hr/>
     <h3>Findings</h3>
-    <p>{{ get_field('CT_Findings') }}</p>
+    <p>{{ get_field('Rad_Findings') }}</p>
     <h3>Impressions and Conclusions</h3>
-    <p>{{ get_field('CT_Conclusions') }}</p>
+    <p>{{ get_field('Rad_Conclusions') }}</p>
 @endsection
