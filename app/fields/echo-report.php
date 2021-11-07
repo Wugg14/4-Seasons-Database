@@ -72,7 +72,7 @@ $fields
         'wrapper' => ['width' => '33']
     ])
     ->addTextArea('clinical_history')
-    ->addGroup('M-Mode')
+
     ->addGroup('LV_Wall-d', [
         'label' => 'LV Wall-d',
     ])
@@ -469,7 +469,7 @@ $fields
             'id' => 'epss_result',
         ],
     ])
-    ->endGroup()
+
     ->endGroup()
     ->addText('m_mode_comments')
     ->addTextArea('echo_doppler_findings')
